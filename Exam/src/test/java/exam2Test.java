@@ -1,4 +1,5 @@
 import junit.framework.TestCase;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,7 +36,7 @@ public class exam2Test extends TestCase {
                 {567, false},
                 {5890, false},
                 {123456, false},
-                {121,true}
+                {121,false}
 
         });
     }
@@ -47,6 +48,10 @@ public class exam2Test extends TestCase {
         @Test
         public void TestExam() {
             assertEquals(expected, exam.exam(n));
+        }
+        @After
+        public void tearDown() throws Exception {
+            exam=null;
         }
 
 }
